@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u5a6B1/Nntw=",
+  "dgSpecHash": "YPsHu7/i8B0=",
   "success": true,
-  "projectFilePath": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/Backend.csproj",
+  "projectFilePath": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.API/Pizzeria.API.csproj",
   "expectedPackageFiles": [
     "/home/et12alumno/.nuget/packages/microsoft.aspnetcore.openapi/10.0.8/microsoft.aspnetcore.openapi.10.0.8.nupkg.sha512",
     "/home/et12alumno/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
@@ -12,9 +12,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "El paquete \"Microsoft.OpenApi\" 2.0.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
-      "projectPath": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/Backend.csproj",
+      "projectPath": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.API/Pizzeria.API.csproj",
       "warningLevel": 1,
-      "filePath": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/Backend.csproj",
+      "filePath": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.API/Pizzeria.API.csproj",
       "libraryId": "Microsoft.OpenApi",
       "targetGraphs": [
         "net10.0"
