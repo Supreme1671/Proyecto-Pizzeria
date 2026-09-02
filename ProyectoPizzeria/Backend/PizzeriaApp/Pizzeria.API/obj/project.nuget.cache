@@ -1,24 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "YPsHu7/i8B0=",
+  "dgSpecHash": "ByUp/HBBg3s=",
   "success": true,
   "projectFilePath": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.API/Pizzeria.API.csproj",
   "expectedPackageFiles": [
     "/home/et12alumno/.nuget/packages/microsoft.aspnetcore.openapi/10.0.8/microsoft.aspnetcore.openapi.10.0.8.nupkg.sha512",
-    "/home/et12alumno/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
+    "/home/et12alumno/.nuget/packages/microsoft.extensions.apidescription.server/10.0.0/microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
+    "/home/et12alumno/.nuget/packages/microsoft.openapi/2.7.5/microsoft.openapi.2.7.5.nupkg.sha512",
+    "/home/et12alumno/.nuget/packages/swashbuckle.aspnetcore/10.2.3/swashbuckle.aspnetcore.10.2.3.nupkg.sha512",
+    "/home/et12alumno/.nuget/packages/swashbuckle.aspnetcore.swagger/10.2.3/swashbuckle.aspnetcore.swagger.10.2.3.nupkg.sha512",
+    "/home/et12alumno/.nuget/packages/swashbuckle.aspnetcore.swaggergen/10.2.3/swashbuckle.aspnetcore.swaggergen.10.2.3.nupkg.sha512",
+    "/home/et12alumno/.nuget/packages/swashbuckle.aspnetcore.swaggerui/10.2.3/swashbuckle.aspnetcore.swaggerui.10.2.3.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "message": "El paquete \"Microsoft.OpenApi\" 2.0.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
-      "projectPath": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.API/Pizzeria.API.csproj",
-      "warningLevel": 1,
-      "filePath": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.API/Pizzeria.API.csproj",
-      "libraryId": "Microsoft.OpenApi",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    }
-  ]
+  "logs": []
 }
