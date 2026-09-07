@@ -1,7 +1,8 @@
+using Swashbuckle.AspNetCore.SwaggerUI;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
@@ -10,6 +11,13 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    
+    // Habilita la interfaz de Swagger UI apuntando al JSON generado por AddOpenApi
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/openapi/v1.json", "Pizzeria API v1");
+        options.RoutePrefix = string.Empty; // Define Swagger como la página principal en '/'
+    });
 }
 
 app.UseHttpsRedirection();

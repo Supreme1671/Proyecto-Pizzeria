@@ -1,5 +1,8 @@
 /home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/appsettings.Development.json
 /home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/appsettings.json
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/PizzeriaApp/Pizzeria.API/appsettings.Development.json
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/PizzeriaApp/Pizzeria.API/appsettings.json
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/PizzeriaApp/Pizzeria.API/Properties/launchSettings.json
 /home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/Backend.staticwebassets.endpoints.json
 /home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/Backend
 /home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/Backend.deps.json
@@ -32,14 +35,4 @@
 /home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/obj/Debug/net10.0/Backend.pdb
 /home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/obj/Debug/net10.0/Backend.genruntimeconfig.cache
 /home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/obj/Debug/net10.0/ref/Backend.dll
-/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/PizzeriaApp/Pizzeria.API/appsettings.Development.json
-/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/PizzeriaApp/Pizzeria.API/appsettings.json
-/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/PizzeriaApp/Pizzeria.API/obj/Pizzeria.API.csproj.nuget.dgspec.json
-/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/PizzeriaApp/Pizzeria.API/obj/project.assets.json
-/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/PizzeriaApp/Pizzeria.API/Properties/launchSettings.json
-/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/PizzeriaApp/Pizzeria.Cliente/obj/Pizzeria.Cliente.csproj.nuget.dgspec.json
-/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/PizzeriaApp/Pizzeria.Cliente/obj/project.assets.json
-/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/PizzeriaApp/Pizzeria.Cocina/obj/Pizzeria.Cocina.csproj.nuget.dgspec.json
-/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/PizzeriaApp/Pizzeria.Cocina/obj/project.assets.json
-/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/PizzeriaApp/Pizzeria.Modelos/obj/Pizzeria.Modelos.csproj.nuget.dgspec.json
-/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/PizzeriaApp/Pizzeria.Modelos/obj/project.assets.json
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/bin/Debug/net10.0/Swashbuckle.AspNetCore.SwaggerUI.dll

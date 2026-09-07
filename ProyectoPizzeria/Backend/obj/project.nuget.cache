@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "u5a6B1/Nntw=",
+  "dgSpecHash": "Xj482Z0LGOQ=",
   "success": true,
   "projectFilePath": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/Backend.csproj",
   "expectedPackageFiles": [
     "/home/et12alumno/.nuget/packages/microsoft.aspnetcore.openapi/10.0.8/microsoft.aspnetcore.openapi.10.0.8.nupkg.sha512",
-    "/home/et12alumno/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
+    "/home/et12alumno/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512",
+    "/home/et12alumno/.nuget/packages/swashbuckle.aspnetcore.swaggerui/10.2.3/swashbuckle.aspnetcore.swaggerui.10.2.3.nupkg.sha512"
   ],
   "logs": [
     {
