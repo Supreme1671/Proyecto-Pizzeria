@@ -1,0 +1,12 @@
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/bin/Debug/net8.0/Pizzeria.Modelos.deps.json
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/bin/Debug/net8.0/Pizzeria.Modelos.dll
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/bin/Debug/net8.0/Pizzeria.Modelos.pdb
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/obj/Debug/net8.0/Pizzeria.Modelos.GeneratedMSBuildEditorConfig.editorconfig
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/obj/Debug/net8.0/Pizzeria.Modelos.AssemblyInfoInputs.cache
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/obj/Debug/net8.0/Pizzeria.Modelos.AssemblyInfo.cs
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/obj/Debug/net8.0/Pizzeria.Modelos.csproj.CoreCompileInputs.cache
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/obj/Debug/net8.0/Pizzeria.Modelos.sourcelink.json
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/obj/Debug/net8.0/Pizzeria.Modelos.dll
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/obj/Debug/net8.0/refint/Pizzeria.Modelos.dll
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/obj/Debug/net8.0/Pizzeria.Modelos.pdb
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/obj/Debug/net8.0/ref/Pizzeria.Modelos.dll

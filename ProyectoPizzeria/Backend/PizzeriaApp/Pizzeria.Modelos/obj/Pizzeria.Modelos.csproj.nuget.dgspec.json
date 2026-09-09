@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/ProyectoPizzeria.csproj": {}
+    "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj": {}
   },
   "projects": {
-    "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/ProyectoPizzeria.csproj": {
+    "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/ProyectoPizzeria.csproj",
-        "projectName": "ProyectoPizzeria",
-        "projectPath": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/ProyectoPizzeria.csproj",
+        "projectUniqueName": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj",
+        "projectName": "Pizzeria.Modelos",
+        "projectPath": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj",
         "packagesPath": "/home/et12alumno/.nuget/packages/",
-        "outputPath": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/obj/",
+        "outputPath": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/et12alumno/.nuget/NuGet/NuGet.Config"
@@ -44,16 +44,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[10.0.8, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.5.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -71,18 +61,11 @@
               "version": "[8.0.27, 8.0.27]"
             },
             {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[8.0.27, 8.0.27]"
-            },
-            {
               "name": "Microsoft.NETCore.App.Ref",
               "version": "[8.0.27, 8.0.27]"
             }
           ],
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

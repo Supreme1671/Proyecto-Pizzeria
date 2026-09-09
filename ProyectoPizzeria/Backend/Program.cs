@@ -1,22 +1,19 @@
-using Swashbuckle.AspNetCore.SwaggerUI;
+using Swashbuckle.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
-    
-    // Habilita la interfaz de Swagger UI apuntando al JSON generado por AddOpenApi
+    app.UseSwagger();
     app.UseSwaggerUI(options =>
     {
-        options.SwaggerEndpoint("/openapi/v1.json", "Pizzeria API v1");
-        options.RoutePrefix = string.Empty; // Define Swagger como la página principal en '/'
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Pizzeria API v1");
+        options.RoutePrefix = string.Empty;
     });
 }
 
@@ -29,14 +26,12 @@ var summaries = new[]
 
 app.MapGet("/weatherforecast", () =>
 {
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
+    var forecast = Enumerable.Range(1, 5).Select(index =>
+        new WeatherForecast(
             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
             Random.Shared.Next(-20, 55),
             summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
+        )).ToArray();
     return forecast;
 })
 .WithName("GetWeatherForecast");

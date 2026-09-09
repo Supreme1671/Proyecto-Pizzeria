@@ -1,0 +1,9 @@
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/obj/Debug/net8.0/ProyectoPizzeria.csproj.AssemblyReference.cache
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/obj/Debug/net8.0/rpswa.dswa.cache.json
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/obj/Debug/net8.0/ProyectoPizzeria.GeneratedMSBuildEditorConfig.editorconfig
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/obj/Debug/net8.0/ProyectoPizzeria.AssemblyInfoInputs.cache
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/obj/Debug/net8.0/ProyectoPizzeria.AssemblyInfo.cs
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/obj/Debug/net8.0/ProyectoPizzeria.csproj.CoreCompileInputs.cache
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/obj/Debug/net8.0/ProyectoPizzeria.MvcApplicationPartsAssemblyInfo.cs
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/obj/Debug/net8.0/ProyectoPizzeria.MvcApplicationPartsAssemblyInfo.cache
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/obj/Debug/net8.0/ProyectoPizzeria.sourcelink.json
