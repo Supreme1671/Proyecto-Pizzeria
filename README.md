@@ -28,7 +28,7 @@ Sistema web integral para la gestión de pedidos, productos, clientes y administ
 Antes de ejcutar nuestro programa debera contar con: 
 
 * [.NET SDK 8.0](https://dotnet.microsoft.com/download) o superior.
-* Servidor [MySQL](https://dev.mysql.com/downloads/installer/) (o MariaDB) ejecutándose localmente o en un contenedor.
+* Servidor [MySQL](https://dev.mysql.com/downloads/installer/) ejecutándose localmente o en un contenedor.
 * [Git](https://git-scm.com/) para el control de versiones.
 
 # Instalacion 
