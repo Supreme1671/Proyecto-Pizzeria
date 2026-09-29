@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Backend/PizzeriaApp/Pizzeria.API/Pizzeria.API.csproj" />
+  <Project Path="Backend/PizzeriaApp/Pizzeria.Cliente/Pizzeria.Cliente.csproj" />
+  <Project Path="Backend/PizzeriaApp/Pizzeria.Cocina/Pizzeria.Cocina.csproj" />
+  <Project Path="Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj" />
+</Solution>

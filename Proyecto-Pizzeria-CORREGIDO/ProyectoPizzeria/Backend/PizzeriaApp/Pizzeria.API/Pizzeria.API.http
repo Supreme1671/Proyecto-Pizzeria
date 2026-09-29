@@ -1,0 +1,27 @@
+@PizzeriaApi_HostAddress = http://localhost:5029
+
+GET {{PizzeriaApi_HostAddress}}/api/pizzas
+Accept: application/json
+
+###
+
+GET {{PizzeriaApi_HostAddress}}/api/pedidos
+Accept: application/json
+
+###
+
+POST {{PizzeriaApi_HostAddress}}/api/pedidos
+Content-Type: application/json
+
+{
+  "cliente": {
+    "nombre": "Enzo",
+    "direccion": "Av. Siempre Viva 123",
+    "telefono": "1111111111"
+  },
+  "pizzas": [
+    {
+      "id": 1
+    }
+  ]
+}
