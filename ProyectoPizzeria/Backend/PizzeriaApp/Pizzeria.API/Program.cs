@@ -6,16 +6,28 @@ using Pizzeria.Modelos;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.UseStaticFiles();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>{
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Pizzeria API v1");
+        
+        // Inyectar el CSS de la Pizzería
+        c.InjectStylesheet("/css/pizzeria-swagger.css");
+        
+        // Título de la pestaña del navegador
+        c.DocumentTitle = "Pizzería API - Menú de Endpoints 🍕";
+    });
 }
+
 
 var pedidos = new ConcurrentDictionary<int, Pedido>();
 var menu = new List<Pizza>

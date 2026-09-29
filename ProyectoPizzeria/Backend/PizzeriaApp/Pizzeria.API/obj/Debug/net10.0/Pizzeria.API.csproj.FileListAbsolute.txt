@@ -114,3 +114,4 @@
 /home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.API/obj/Debug/net10.0/Pizzeria.API.pdb
 /home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.API/obj/Debug/net10.0/Pizzeria.API.genruntimeconfig.cache
 /home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.API/obj/Debug/net10.0/ref/Pizzeria.API.dll
+/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.API/bin/Debug/net10.0/Pizzeria.API.staticwebassets.runtime.json

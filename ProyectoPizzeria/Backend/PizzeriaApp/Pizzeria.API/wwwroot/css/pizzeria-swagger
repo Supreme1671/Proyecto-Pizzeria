@@ -1,0 +1,109 @@
+/* =========================================================
+   ESTILO TEMÁTICO PIZZERÍA - SWAGGER UI
+   ========================================================= */
+
+:root {
+    --pizzeria-red: #d32f2f;
+    --pizzeria-red-dark: #9a0007;
+    --pizzeria-green: #2e7d32;
+    --pizzeria-yellow: #fbc02d;
+    --pizzeria-bg: #fffbf0;
+    --pizzeria-dark: #212121;
+}
+
+/* Fondo principal e imagen de marca */
+body {
+    background-color: var(--pizzeria-bg) !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Barra Superior (Topbar) estilo Italiano / Pizzería */
+.swagger-ui .topbar {
+    background: linear-gradient(90deg, var(--pizzeria-green) 33%, #ffffff 33%, #ffffff 66%, var(--pizzeria-red) 66%) !important;
+    padding: 12px 0;
+    border-bottom: 4px solid var(--pizzeria-yellow);
+}
+
+.swagger-ui .topbar a {
+    color: #333 !important;
+    font-weight: bold;
+}
+
+.swagger-ui .topbar img {
+    content: url('https://cdn-icons-png.flaticon.com/512/3595/3595455.png'); /* Ícono de Pizza */
+    height: 45px !important;
+    width: auto;
+}
+
+/* Encabezado e información de la API */
+.swagger-ui .info .title {
+    color: var(--pizzeria-red) !important;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 2.2rem;
+}
+
+.swagger-ui .info .title::after {
+    content: " 🍕";
+}
+
+/* Botón "Execute" / Probar Endpoints */
+.swagger-ui .btn.execute {
+    background-color: var(--pizzeria-green) !important;
+    border-color: var(--pizzeria-green) !important;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.swagger-ui .btn.execute:hover {
+    background-color: #1b5e20 !important;
+}
+
+/* Bloques de Métodos HTTP con bordes redondeados */
+.swagger-ui .opblock {
+    border-radius: 10px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08) !important;
+    margin-bottom: 15px !important;
+}
+
+/* Colores personalizados para los badges de verbos HTTP */
+.swagger-ui .opblock-summary-method {
+    border-radius: 6px !important;
+    font-weight: bold !important;
+}
+
+/* GET (Salsa/Tomate) */
+.swagger-ui .opblock.opblock-get {
+    border-color: #e57373 !important;
+    background: rgba(229, 115, 115, 0.08) !important;
+}
+.swagger-ui .opblock.opblock-get .opblock-summary-method {
+    background: var(--pizzeria-red) !important;
+}
+
+/* POST (Queso / Verde Fresco) */
+.swagger-ui .opblock.opblock-post {
+    border-color: #81c784 !important;
+    background: rgba(129, 199, 132, 0.08) !important;
+}
+.swagger-ui .opblock.opblock-post .opblock-summary-method {
+    background: var(--pizzeria-green) !important;
+}
+
+/* PUT (Masa horneada / Dorado) */
+.swagger-ui .opblock.opblock-put {
+    border-color: #ffb74d !important;
+    background: rgba(255, 183, 77, 0.08) !important;
+}
+.swagger-ui .opblock.opblock-put .opblock-summary-method {
+    background: #f57c00 !important;
+}
+
+/* DELETE (Horno Fuerte) */
+.swagger-ui .opblock.opblock-delete {
+    border-color: #e53935 !important;
+    background: rgba(229, 57, 53, 0.08) !important;
+}
+.swagger-ui .opblock.opblock-delete .opblock-summary-method {
+    background: #b71c1c !important;
+}
