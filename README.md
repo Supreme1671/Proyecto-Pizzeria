@@ -1,4 +1,6 @@
 # Proyecto Pizzería Distribuida
+![Banner de Pizzería](.Assets/Banner.jpeg)
+
 
 Proyecto educativo en C#/.NET 8 para simular el pedido y la entrega de una pizza mediante una arquitectura distribuida.
 
