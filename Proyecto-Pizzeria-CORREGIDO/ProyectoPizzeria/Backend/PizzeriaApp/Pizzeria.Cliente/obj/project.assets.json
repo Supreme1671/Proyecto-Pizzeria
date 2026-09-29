@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/et12alumno/Descargas/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Cliente/Pizzeria.Cliente.csproj",
+      "projectUniqueName": "/home/et12alumno/Proyecto-Pizzeria/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Cliente/Pizzeria.Cliente.csproj",
       "projectName": "Pizzeria.Cliente",
-      "projectPath": "/home/et12alumno/Descargas/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Cliente/Pizzeria.Cliente.csproj",
+      "projectPath": "/home/et12alumno/Proyecto-Pizzeria/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Cliente/Pizzeria.Cliente.csproj",
       "packagesPath": "/home/et12alumno/.nuget/packages/",
-      "outputPath": "/home/et12alumno/Descargas/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Cliente/obj/",
+      "outputPath": "/home/et12alumno/Proyecto-Pizzeria/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Cliente/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/et12alumno/.nuget/NuGet/NuGet.Config"
@@ -52,8 +52,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "/home/et12alumno/Descargas/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj": {
-              "projectPath": "/home/et12alumno/Descargas/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj"
+            "/home/et12alumno/Proyecto-Pizzeria/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj": {
+              "projectPath": "/home/et12alumno/Proyecto-Pizzeria/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj"
             }
           }
         }

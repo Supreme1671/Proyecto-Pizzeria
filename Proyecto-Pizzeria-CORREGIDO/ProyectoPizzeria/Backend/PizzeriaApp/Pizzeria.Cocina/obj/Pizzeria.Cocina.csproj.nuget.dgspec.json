@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/et12alumno/Descargas/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Cocina/Pizzeria.Cocina.csproj": {}
+    "/home/et12alumno/Proyecto-Pizzeria/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Cocina/Pizzeria.Cocina.csproj": {}
   },
   "projects": {
-    "/home/et12alumno/Descargas/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Cocina/Pizzeria.Cocina.csproj": {
+    "/home/et12alumno/Proyecto-Pizzeria/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Cocina/Pizzeria.Cocina.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/et12alumno/Descargas/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Cocina/Pizzeria.Cocina.csproj",
+        "projectUniqueName": "/home/et12alumno/Proyecto-Pizzeria/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Cocina/Pizzeria.Cocina.csproj",
         "projectName": "Pizzeria.Cocina",
-        "projectPath": "/home/et12alumno/Descargas/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Cocina/Pizzeria.Cocina.csproj",
+        "projectPath": "/home/et12alumno/Proyecto-Pizzeria/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Cocina/Pizzeria.Cocina.csproj",
         "packagesPath": "/home/et12alumno/.nuget/packages/",
-        "outputPath": "/home/et12alumno/Descargas/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Cocina/obj/",
+        "outputPath": "/home/et12alumno/Proyecto-Pizzeria/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Cocina/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/et12alumno/.nuget/NuGet/NuGet.Config"
@@ -27,8 +27,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/home/et12alumno/Descargas/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj": {
-                "projectPath": "/home/et12alumno/Descargas/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj"
+              "/home/et12alumno/Proyecto-Pizzeria/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj": {
+                "projectPath": "/home/et12alumno/Proyecto-Pizzeria/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj"
               }
             }
           }
@@ -342,14 +342,14 @@
         }
       }
     },
-    "/home/et12alumno/Descargas/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj": {
+    "/home/et12alumno/Proyecto-Pizzeria/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/et12alumno/Descargas/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj",
+        "projectUniqueName": "/home/et12alumno/Proyecto-Pizzeria/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj",
         "projectName": "Pizzeria.Modelos",
-        "projectPath": "/home/et12alumno/Descargas/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj",
+        "projectPath": "/home/et12alumno/Proyecto-Pizzeria/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj",
         "packagesPath": "/home/et12alumno/.nuget/packages/",
-        "outputPath": "/home/et12alumno/Descargas/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/obj/",
+        "outputPath": "/home/et12alumno/Proyecto-Pizzeria/Proyecto-Pizzeria-CORREGIDO/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/et12alumno/.nuget/NuGet/NuGet.Config"
