@@ -13,17 +13,18 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 app.UseStaticFiles();
+app.UseDefaultFiles();
 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(c =>{
+    app.UseSwaggerUI(c =>
+    {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Pizzeria API v1");
         
-        // Inyectar el CSS de la Pizzería
-        c.InjectStylesheet("/css/pizzeria-swagger.css");
+        // Usar ruta relativa sin barra inicial si la app corre en un subpath
+        c.InjectStylesheet("css/pizzeria-swagger.css");
         
-        // Título de la pestaña del navegador
         c.DocumentTitle = "Pizzería API - Menú de Endpoints 🍕";
     });
 }
