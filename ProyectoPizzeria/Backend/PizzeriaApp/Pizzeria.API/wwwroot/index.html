@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luigi's &amp; Elke's - Pizzeria Brauhaus 🍕</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--madera:#2a1b12;--madera2:#4a3020;--yeso:#f2e7cf;--papel:#fbf5e6;--tiza:#efe9d6;--tiza2:#b9c6b8;--pizarra:#1f2d25;--cobre:#c9822f;--verde:#2f5a3a;--tomate:#b3321f;--f1:'Alfa Slab One',Georgia,serif;--f2:'Nunito Sans',system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--yeso);color:var(--madera);font:400 1rem/1.5 var(--f2)}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--cobre);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h2,h3{font-family:var(--f1);font-weight:400;margin:0}
+
+/* Cabecera */
+.top{background:var(--madera);color:var(--tiza);border-bottom:4px solid var(--cobre)}
+.bar{display:flex;align-items:center;gap:24px;min-height:64px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.marca{font:1.35rem/1 var(--f1);color:var(--tiza);text-decoration:none;display:flex;flex-direction:column;gap:3px}
+.marca small{font:600 .75rem var(--f2);color:var(--cobre)}
+nav{display:flex;gap:4px;margin-left:auto}
+nav button{background:none;border:0;padding:10px 16px;border-radius:8px;cursor:pointer;font-weight:800;color:var(--tiza2)}
+nav button[aria-selected=true]{background:var(--tiza);color:var(--madera)}
+nav button:not([aria-selected=true]):hover{color:#fff}
+#n{background:var(--tomate);color:#fff;border-radius:99px;padding:0 8px;font-size:.8rem;margin-left:4px}
+#n:empty{display:none}
+.est{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--tiza2)}
+.est i{width:10px;height:10px;border-radius:50%;background:#999}
+.est.ok i{background:#5cc27a}.est.mal i{background:#e5533d}
+
+.banner{display:block;width:100%;max-height:340px;object-fit:cover;object-position:50% 40%}
+
+/* Vistas */
+[hidden]{display:none!important}
+main{padding-top:32px;padding-bottom:56px}
+.lead{margin:6px 0 0;opacity:.8}
+.pedir{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,1fr);gap:28px;align-items:start}
+
+/* Pizarra del menu */
+.pizarra{background:var(--pizarra);color:var(--tiza);border:10px solid var(--madera2);border-radius:6px;box-shadow:inset 0 0 40px rgba(0,0,0,.45);padding:26px 28px}
+.pizarra .lead{color:var(--tiza2);opacity:1}
+.pizarra h2{font-size:2rem}
+#menu{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:18px}
+#menu li{display:grid;grid-template-columns:56px 1fr auto;gap:16px;align-items:center}
+#menu svg{width:56px;height:56px}
+.nom{display:flex;align-items:baseline;gap:8px}
+.nom b{font:1.25rem var(--f1);font-weight:400}
+.nom span{flex:1;border-bottom:2px dotted rgba(239,233,214,.35);transform:translateY(-4px)}
+.nom em{font:1.15rem var(--f1);font-style:normal;color:#f0cf79}
+.desc{margin:2px 0 0;color:var(--tiza2);font-size:.92rem}
+.qty{display:flex;align-items:center;gap:10px}
+.qty button{width:34px;height:34px;border-radius:50%;border:2px solid var(--tiza);background:none;color:var(--tiza);font-size:1.2rem;line-height:1;cursor:pointer}
+.qty button:hover:not(:disabled){background:var(--tiza);color:var(--pizarra)}
+.qty button:disabled{opacity:.3;cursor:default}
+.qty output{min-width:1.5ch;text-align:center;font:1.2rem var(--f1)}
+
+/* Ticket de pedido */
+.ticket{background:var(--papel);border:1px solid #d9c9a3;border-radius:6px;padding:24px;position:sticky;top:16px;box-shadow:0 10px 24px -14px rgba(42,27,18,.5)}
+.ticket h2{font-size:1.5rem;margin-bottom:14px}
+.ticket label{display:block;font-weight:800;font-size:.9rem;margin-top:12px}
+.ticket input{width:100%;margin-top:4px;padding:10px 12px;border:1.5px solid #b9a77f;border-radius:6px;background:#fff}
+.ticket input:focus{border-color:var(--verde)}
+#res{list-style:none;margin:18px 0 0;padding:12px 0;border-top:2px dashed #b9a77f;border-bottom:2px dashed #b9a77f;display:grid;gap:6px}
+#res li{display:flex;justify-content:space-between;gap:12px}
+#res .vacio{color:#7a6650;font-style:italic}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin:14px 0}
+.total b{font:1.5rem var(--f1);font-weight:400}
+.enviar{width:100%;padding:14px;border:0;border-radius:8px;background:var(--tomate);color:#fff;font-weight:800;font-size:1.05rem;cursor:pointer;transition:background .15s,transform .1s}
+.enviar:hover:not(:disabled){background:#8f2515}
+.enviar:active:not(:disabled){transform:scale(.98)}
+.enviar:disabled{opacity:.55;cursor:default}
+.msg{margin:12px 0 0;padding:10px 12px;border-radius:6px;font-size:.92rem;border-left:5px solid}
+.msg:empty{display:none}
+.msg.ok{background:#e3f1e5;border-color:var(--verde)}
+.msg.warn{background:#fcefd0;border-color:var(--cobre)}
+.msg.err{background:#f8dcd6;border-color:var(--tomate)}
+.msg a{color:inherit;font-weight:800}
+
+/* Tablero */
+.cab{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.cab h2{font-size:2rem}
+.cab button{border:2px solid var(--madera);background:none;border-radius:8px;padding:8px 14px;font-weight:800;cursor:pointer}
+.cab button:hover{background:var(--madera);color:var(--tiza)}
+.tablero{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:start}
+.col{background:rgba(74,48,32,.08);border-radius:8px;padding:12px;min-height:140px}
+.col>h3{font-size:1rem;display:flex;justify-content:space-between;align-items:center;padding:2px 4px 10px;border-bottom:4px solid var(--c)}
+.col>h3 span{font:800 .85rem var(--f2);background:var(--c);color:#fff;border-radius:99px;padding:0 9px}
+.col[data-e="0"]{--c:#9a6a1c}.col[data-e="1"]{--c:var(--tomate)}.col[data-e="2"]{--c:#2a6f8f}.col[data-e="3"]{--c:var(--verde)}
+.col ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.vac{color:#7a6650;font-size:.9rem;font-style:italic;text-align:center;padding:18px 0}
+.ped{background:var(--papel);border:1px solid #d9c9a3;border-radius:6px;padding:12px 14px}
+.ped header{display:flex;justify-content:space-between;align-items:baseline}
+.ped header b{font:1.1rem var(--f1);font-weight:400}
+.ped time{font-size:.8rem;color:#7a6650}
+.ped .cli{font-weight:800;margin:4px 0 0}
+.ped .dato{font-size:.85rem;color:#6b5844;margin:0;overflow-wrap:anywhere}
+.ped ul{margin:8px 0;padding:8px 0 0;border-top:1px dashed #b9a77f;gap:2px}
+.ped .tot{display:flex;justify-content:space-between;font-weight:800}
+.ped button{width:100%;margin-top:10px;padding:8px;border:0;border-radius:6px;background:var(--madera);color:var(--tiza);font-weight:800;cursor:pointer}
+.ped button:hover:not(:disabled){background:var(--verde)}
+.ped button:disabled{opacity:.5;cursor:default}
+footer{background:var(--madera);color:var(--tiza2);text-align:center;padding:18px;font-size:.85rem}
+
+@media(max-width:900px){.pedir{grid-template-columns:1fr}.ticket{position:static}.tablero{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.tablero{grid-template-columns:1fr}.pizarra{padding:20px 16px}#menu li{grid-template-columns:44px 1fr}#menu svg{width:44px;height:44px}#menu .qty{grid-column:2}nav{margin-left:0;width:100%}nav button{flex:1}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap bar">
+  <a class="marca" href="#pedir">Luigi's &amp; Elke's<small>Pizzeria-Brauhaus</small></a>
+  <nav role="tablist" aria-label="Secciones">
+    <button role="tab" id="t-pedir" data-v="pedir" aria-selected="true">Pedir</button>
+    <button role="tab" id="t-tablero" data-v="tablero" aria-selected="false">Pedidos <span id="n"></span></button>
+  </nav>
+  <span class="est" id="est" role="status"><i></i><b>Conectando…</b></span>
+</div></header>
+
+<img class="banner" src="img/banner.jpg" alt="Luigi y Elke sirviendo una pizza y una jarra de cerveza en la pizzería, frente al horno de leña">
+
+<main class="wrap">
+  <section id="pedir" class="pedir" aria-labelledby="t-pedir">
+    <div class="pizarra">
+      <h2>Speisekarte</h2>
+      <p class="lead">Elegí tus pizzas, las mandamos directo a cocina.</p>
+      <ul id="menu"><li class="lead">Cargando el menú…</li></ul>
+    </div>
+
+    <form class="ticket" id="f" novalidate>
+      <h2>Tu pedido</h2>
+      <label for="nom">Nombre</label>
+      <input id="nom" autocomplete="name" required>
+      <label for="tel">Teléfono</label>
+      <input id="tel" type="tel" autocomplete="tel">
+      <label for="dir">Dirección de entrega</label>
+      <input id="dir" autocomplete="street-address">
+      <ul id="res"></ul>
+      <div class="total"><span>Total</span><b id="tot">$0</b></div>
+      <button class="enviar" id="btn" type="submit">Enviar pedido a cocina</button>
+      <p class="msg" id="msg" role="status"></p>
+    </form>
+  </section>
+
+  <section id="tablero" hidden aria-labelledby="t-tablero">
+    <div class="cab">
+      <div><h2>Pedidos en curso</h2><p class="lead">Se actualiza solo cada 5 segundos.</p></div>
+      <button type="button" id="ref">Actualizar ahora</button>
+    </div>
+    <div class="tablero" id="tb"></div>
+  </section>
+</main>
+<footer>Luigi's &amp; Elke's · Proyecto Pizzería Distribuida · API REST + cocina por TCP</footer>
+
+<script>
+const ESTADOS=[['EsperaDeConfirmacion','Esperando confirmación'],['EnPreparacion','En preparación'],['EnViaje','En viaje'],['Entregado','Entregado']];
+const DESC={muzzarella:'Salsa de tomate, muzzarella y aceitunas.',fugazzeta:'Cebolla dulce, muzzarella y orégano.',napolitana:'Tomate fresco, ajo y muzzarella.'};
+const $=id=>document.getElementById(id);
+const $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const money=n=>new Intl.NumberFormat('es-AR',{style:'currency',currency:'ARS',maximumFractionDigits:0}).format(n);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let menu=[],cant={};
+
+async function api(path,opt){
+  let r;
+  try{r=await fetch(path,opt)}catch{setApi(false);throw new Error('No se pudo conectar con la API. ¿Está ejecutándose?')}
+  setApi(true);
+  let d=null;try{d=await r.json()}catch{}
+  if(!r.ok)throw new Error(d?.mensaje||'Error '+r.status);
+  return d;
+}
+function setApi(ok){const e=$('est');e.className='est '+(ok?'ok':'mal');e.lastChild.textContent=ok?'API conectada':'API sin conexión'}
+function say(t,tipo=''){const m=$('msg');m.className='msg '+tipo;m.innerHTML=t}
+
+const pizzaSvg=i=>{const c=['#2b2b2b','#f7f0dc','#8c1c13'][i%3];return `<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#d9a05b"/><circle cx="24" cy="24" r="18" fill="#f0cf79"/><g fill="${c}"><circle cx="17" cy="19" r="3"/><circle cx="30" cy="17" r="3"/><circle cx="31" cy="30" r="3"/><circle cx="18" cy="31" r="3"/><circle cx="24" cy="24" r="2.5"/></g></svg>`};
+
+/* ---------- Menu y pedido ---------- */
+async function cargarMenu(){
+  try{menu=await api('/api/pizzas')}catch(e){$('menu').innerHTML=`<li class="lead">${esc(e.message)}</li>`;return}
+  $('menu').innerHTML=menu.map((p,i)=>`<li>${pizzaSvg(i)}<div>
+    <div class="nom"><b>${esc(p.nombre)}</b><span></span><em>${money(p.precio)}</em></div>
+    <p class="desc">${esc(DESC[p.nombre.toLowerCase()]||'La receta de la casa.')}</p></div>
+    <div class="qty"><button type="button" data-id="${p.id}" data-d="-1" aria-label="Quitar ${esc(p.nombre)}" disabled>−</button>
+    <output id="q${p.id}" aria-live="polite">0</output>
+    <button type="button" data-id="${p.id}" data-d="1" aria-label="Agregar ${esc(p.nombre)}">+</button></div></li>`).join('');
+  resumen();
+}
+$('menu').addEventListener('click',e=>{
+  const b=e.target.closest('button[data-id]');if(!b)return;
+  const id=+b.dataset.id;cant[id]=Math.max(0,(cant[id]||0)+ +b.dataset.d);resumen();
+});
+function resumen(){
+  let total=0,html='';
+  menu.forEach(p=>{
+    const c=cant[p.id]||0;total+=c*p.precio;
+    $('q'+p.id).textContent=c;
+    $$('button[data-id="'+p.id+'"][data-d="-1"]')[0].disabled=!c;
+    if(c)html+=`<li><span>${c}× ${esc(p.nombre)}</span><span>${money(c*p.precio)}</span></li>`;
+  });
+  $('res').innerHTML=html||'<li class="vacio">Todavía no elegiste ninguna pizza.</li>';
+  $('tot').textContent=money(total);
+}
+$('f').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const pizzas=[];menu.forEach(p=>{for(let i=0;i<(cant[p.id]||0);i++)pizzas.push({id:p.id})});
+  if(!$('nom').value.trim()){say('Necesitamos tu nombre para el pedido.','err');$('nom').focus();return}
+  if(!pizzas.length){say('Elegí al menos una pizza del menú.','err');return}
+  $('btn').disabled=true;say('Enviando a cocina…');
+  try{
+    const d=await api('/api/pedidos',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({cliente:{nombre:$('nom').value.trim(),direccion:$('dir').value.trim(),telefono:$('tel').value.trim()},pizzas})});
+    say(`<b>Pedido #${d.pedido.id}.</b> ${esc(d.mensaje)} <a href="#tablero">Ver estado</a>`,d.cocinaConectada?'ok':'warn');
+    cant={};$('f').reset();resumen();cargarPedidos();
+  }catch(err){say(esc(err.message),'err')}
+  finally{$('btn').disabled=false}
+});
+
+/* ---------- Tablero de pedidos ---------- */
+const norm=e=>typeof e==='number'?e:Math.max(0,ESTADOS.findIndex(x=>x[0]===e));
+async function cargarPedidos(){
+  let lista;
+  try{lista=await api('/api/pedidos')}catch(e){$('tb').innerHTML=`<p class="vac">${esc(e.message)}</p>`;return}
+  const activos=lista.filter(p=>norm(p.estado)<3).length;
+  $('n').textContent=activos||'';
+  const hora=f=>new Date(f).toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
+  $('tb').innerHTML=ESTADOS.map((est,i)=>{
+    const ps=lista.filter(p=>norm(p.estado)===i).sort((a,b)=>b.id-a.id);
+    const cards=ps.map(p=>{
+      const g={};p.pizzas.forEach(z=>{g[z.nombre]=(g[z.nombre]||0)+1});
+      const t=p.pizzas.reduce((s,z)=>s+z.precio,0);
+      return `<li class="ped"><header><b>#${p.id}</b><time>${hora(p.fechaCreacion)}</time></header>
+        <p class="cli">${esc(p.cliente.nombre)}</p>
+        ${p.cliente.direccion?`<p class="dato">${esc(p.cliente.direccion)}</p>`:''}
+        ${p.cliente.telefono?`<p class="dato">${esc(p.cliente.telefono)}</p>`:''}
+        <ul>${Object.entries(g).map(([n,c])=>`<li>${c}× ${esc(n)}</li>`).join('')}</ul>
+        <div class="tot"><span>Total</span><span>${money(t)}</span></div>
+        ${i<3?`<button type="button" data-id="${p.id}" data-e="${ESTADOS[i+1][0]}">Pasar a ${ESTADOS[i+1][1].toLowerCase()}</button>`:''}</li>`;
+    }).join('');
+    return `<div class="col" data-e="${i}"><h3>${est[1]}<span>${ps.length}</span></h3><ul>${cards||'<li class="vac">Sin pedidos</li>'}</ul></div>`;
+  }).join('');
+}
+$('tb').addEventListener('click',async e=>{
+  const b=e.target.closest('button[data-id]');if(!b)return;
+  b.disabled=true;
+  try{await api(`/api/pedidos/${b.dataset.id}/estado?estado=${b.dataset.e}`,{method:'PATCH'})}catch(err){alert(err.message)}
+  cargarPedidos();
+});
+$('ref').onclick=cargarPedidos;
+
+/* ---------- Navegacion ---------- */
+function ir(){
+  const v=location.hash==='#tablero'?'tablero':'pedir';
+  ['pedir','tablero'].forEach(s=>{$(s).hidden=s!==v;$('t-'+s).setAttribute('aria-selected',s===v)});
+  if(v==='tablero')cargarPedidos();
+}
+$$('nav button').forEach(b=>b.onclick=()=>{location.hash=b.dataset.v});
+addEventListener('hashchange',ir);
+setInterval(()=>{if(!document.hidden)cargarPedidos()},5000);
+
+cargarMenu();cargarPedidos();ir();
+</script>
+</body>
+</html>

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj",
+      "projectUniqueName": "/home/et12alumno/Descargas/Proyecto-Pizzeria-main/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj",
       "projectName": "Pizzeria.Modelos",
-      "projectPath": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj",
+      "projectPath": "/home/et12alumno/Descargas/Proyecto-Pizzeria-main/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/Pizzeria.Modelos.csproj",
       "packagesPath": "/home/et12alumno/.nuget/packages/",
-      "outputPath": "/home/et12alumno/Proyecto-Pizzeria/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/obj/",
+      "outputPath": "/home/et12alumno/Descargas/Proyecto-Pizzeria-main/ProyectoPizzeria/Backend/PizzeriaApp/Pizzeria.Modelos/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/et12alumno/.nuget/NuGet/NuGet.Config"

@@ -12,8 +12,8 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.UseStaticFiles();
 app.UseDefaultFiles();
+app.UseStaticFiles();
 
 if (app.Environment.IsDevelopment())
 {
