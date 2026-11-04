@@ -84,7 +84,7 @@ app.MapPost("/api/pedidos", async (Pedido? nuevoPedido, CancellationToken cancel
 
     pedidos[nuevoPedido.Id] = nuevoPedido;
 
-    var cocinaRespondio = await NotificarCocinaPorSocketAsync(nuevoPedido, cancellationToken);
+    var cocinaRespondio = await NotificarCocinaPorSocketAsync(nuevoPedido, cancellationToken, app.Logger);
     if (cocinaRespondio)
     {
         nuevoPedido.Estado = EstadoPedido.EnPreparacion;
@@ -116,41 +116,87 @@ app.MapPatch("/api/pedidos/{id:int}/estado", (int id, EstadoPedido estado) =>
 
 app.Run();
 
-static async Task<bool> NotificarCocinaPorSocketAsync(Pedido pedido, CancellationToken cancellationToken)
+static async Task<bool> NotificarCocinaPorSocketAsync(
+    Pedido pedido,
+    CancellationToken cancellationToken,
+    ILogger logger)
 {
-    try
+    const int maxIntentos = 3;
+
+    for (var intento = 1; intento <= maxIntentos; intento++)
     {
         using var client = new TcpClient();
         using var timeout = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
         timeout.CancelAfter(TimeSpan.FromSeconds(3));
 
-        await client.ConnectAsync("127.0.0.1", 5000, timeout.Token);
-        await using var stream = client.GetStream();
-        using var writer = new StreamWriter(stream, new UTF8Encoding(false), leaveOpen: true)
+        try
         {
-            AutoFlush = true
-        };
-        using var reader = new StreamReader(stream, Encoding.UTF8, leaveOpen: true);
+            await client.ConnectAsync("127.0.0.1", 5000, timeout.Token);
+        }
+        catch (SocketException ex)
+        {
+            if (intento == maxIntentos)
+            {
+                logger.LogError(ex, "Cocina no disponible después de {Intentos} intentos.", intento);
+                return false;
+            }
 
-        var json = JsonSerializer.Serialize(pedido);
-        await writer.WriteLineAsync(json);
+            logger.LogWarning(ex, "No se pudo conectar con cocina (intento {Intento}/{MaxIntentos}).", intento, maxIntentos);
+            await Task.Delay(TimeSpan.FromMilliseconds(200 * intento), cancellationToken);
+            continue;
+        }
+        catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested)
+        {
+            if (intento == maxIntentos)
+            {
+                logger.LogError("Tiempo de espera agotado al conectar con cocina después de {Intentos} intentos.", intento);
+                return false;
+            }
 
-        var respuesta = await reader.ReadLineAsync(timeout.Token);
-        return string.Equals(respuesta, "OK", StringComparison.OrdinalIgnoreCase);
+            logger.LogWarning("Tiempo de espera agotado al conectar con cocina (intento {Intento}/{MaxIntentos}).", intento, maxIntentos);
+            await Task.Delay(TimeSpan.FromMilliseconds(200 * intento), cancellationToken);
+            continue;
+        }
+
+        try
+        {
+            await using var stream = client.GetStream();
+            using var writer = new StreamWriter(stream, new UTF8Encoding(false), leaveOpen: true)
+            {
+                AutoFlush = true
+            };
+            using var reader = new StreamReader(stream, Encoding.UTF8, leaveOpen: true);
+
+            var json = JsonSerializer.Serialize(pedido);
+            await writer.WriteLineAsync(json);
+
+            var respuesta = await reader.ReadLineAsync(timeout.Token);
+            if (string.Equals(respuesta, "OK", StringComparison.OrdinalIgnoreCase))
+                return true;
+
+            logger.LogWarning("Cocina respondió con una confirmación inválida para el pedido {PedidoId}.", pedido.Id);
+            return false;
+        }
+        catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+        {
+            throw;
+        }
+        catch (OperationCanceledException)
+        {
+            logger.LogWarning("Tiempo de espera agotado durante la comunicación con cocina para el pedido {PedidoId}.", pedido.Id);
+            return false;
+        }
+        catch (SocketException ex)
+        {
+            logger.LogError(ex, "Error de socket durante la comunicación con cocina para el pedido {PedidoId}.", pedido.Id);
+            return false;
+        }
+        catch (IOException ex)
+        {
+            logger.LogError(ex, "Error de comunicación con cocina para el pedido {PedidoId}.", pedido.Id);
+            return false;
+        }
     }
-    catch (OperationCanceledException)
-    {
-        Console.WriteLine("[Socket] Tiempo de espera agotado al contactar a cocina.");
-        return false;
-    }
-    catch (SocketException ex)
-    {
-        Console.WriteLine($"[Socket] Cocina no disponible: {ex.Message}");
-        return false;
-    }
-    catch (IOException ex)
-    {
-        Console.WriteLine($"[Socket] Error de comunicación: {ex.Message}");
-        return false;
-    }
+
+    return false;
 }
