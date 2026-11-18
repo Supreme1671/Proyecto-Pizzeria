@@ -120,6 +120,22 @@ La API intenta conectar con Cocina hasta 3 veces, con una espera creciente entre
 
 Estas pruebas también cubren los escenarios funcionales principales (consultar menú, crear pedido y consultar/actualizar su estado) y los casos de error de validación, respuesta inválida, timeout y API no disponible. Las solicitudes HTTP usan `async/await` y un timeout para no bloquear la interacción ni esperar indefinidamente.
 
+## Pruebas
+
+El proyecto `Pizzeria.Tests` contiene pruebas unitarias y funcionales:
+
+- Validación de pedidos: cliente obligatorio, al menos una pizza y IDs existentes.
+- Modelo: estado inicial `EsperaDeConfirmacion`.
+- API: menú disponible mediante HTTP y pedido válido registrado con `201 Created`.
+- API: entrada inválida rechazada con `400 Bad Request`.
+
+Ejecutar todas las pruebas:
+
+```bash
+cd ProyectoPizzeria
+dotnet test PizzeriaDistribuida.sln
+```
+
 ## Estados del pedido
 
 - `EsperaDeConfirmacion`

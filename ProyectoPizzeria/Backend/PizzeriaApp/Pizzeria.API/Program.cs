@@ -3,6 +3,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Text.Json;
 using Pizzeria.Modelos;
+using Pizzeria.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -57,25 +58,17 @@ app.MapGet("/api/pedidos/{id:int}", (int id) =>
 .WithName("ObtenerPedido")
 .WithOpenApi();
 
+var pedidoValidator = new PedidoValidator();
+
 app.MapPost("/api/pedidos", async (Pedido? nuevoPedido, CancellationToken cancellationToken) =>
 {
-    if (nuevoPedido is null)
-        return Results.BadRequest(new { mensaje = "El cuerpo del pedido es obligatorio." });
+    var errorValidacion = pedidoValidator.Validar(nuevoPedido, menu);
+    if (errorValidacion is not null)
+        return Results.BadRequest(new { mensaje = errorValidacion });
 
-    if (nuevoPedido.Cliente is null || string.IsNullOrWhiteSpace(nuevoPedido.Cliente.Nombre))
-        return Results.BadRequest(new { mensaje = "El pedido debe incluir el nombre del cliente." });
-
-    if (nuevoPedido.Pizzas is null || nuevoPedido.Pizzas.Count == 0)
-        return Results.BadRequest(new { mensaje = "El pedido debe contener al menos una pizza." });
-
-    var pizzasMenu = nuevoPedido.Pizzas
-        .Select(p => menu.FirstOrDefault(m => m.Id == p.Id))
+    var pizzasValidas = nuevoPedido!.Pizzas
+        .Select(pizza => menu.First(m => m.Id == pizza.Id))
         .ToList();
-
-    if (pizzasMenu.Any(p => p is null))
-        return Results.BadRequest(new { mensaje = "El pedido contiene una pizza que no existe en el menú." });
-
-    var pizzasValidas = pizzasMenu.Cast<Pizza>().ToList();
 
     nuevoPedido.Id = Interlocked.Increment(ref siguienteId);
     nuevoPedido.Pizzas = pizzasValidas;

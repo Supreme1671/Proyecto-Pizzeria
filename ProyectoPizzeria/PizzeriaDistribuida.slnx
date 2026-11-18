@@ -1,4 +1,8 @@
 <Solution>
+  <Folder Name="/Backend/" />
+  <Folder Name="/Backend/PizzeriaApp/">
+    <Project Path="Backend/PizzeriaApp/Pizzeria.Tests/Pizzeria.Tests.csproj" />
+  </Folder>
   <Project Path="Backend/PizzeriaApp/Pizzeria.API/Pizzeria.API.csproj" />
   <Project Path="Backend/PizzeriaApp/Pizzeria.Cliente/Pizzeria.Cliente.csproj" />
   <Project Path="Backend/PizzeriaApp/Pizzeria.Cocina/Pizzeria.Cocina.csproj" />
